@@ -2626,3 +2626,14 @@ Sort out the ten most spoken languages by location.
 Sort out the ten most populated countries.
 """
 
+def sort_by_name(countries):
+    return sorted(countries, key=lambda country: country["name"])
+
+def sort_by_capital(countries):
+    return sorted(countries, key=lambda country: country["capital"])
+
+def sort_by_population(countries):
+    return sorted(countries, key=lambda country: country["population"], reverse=True)
+
+def ten_more_spoken_languages(countries):
+    return sorted(countries, key=lambda country: len(country["languages"]), reverse=True)[:10]
