@@ -7,6 +7,6 @@ yfinance.pdr_override()
 
 ativos = ["ITUB3.SA","VALE3.SA","PETR3.SA","^BVSP"]
 data_inicial = "2023-01-01"
-data_final = "2023-03-01"
+data_final = "2024-01-10"
 tabela_cotacoes = pdr.get_data_yahoo(ativos, start=data_inicial, end=data_final)["Adj Close"]
 display(tabela_cotacoes)

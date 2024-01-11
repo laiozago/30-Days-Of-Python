@@ -1,7 +1,7 @@
 import requests, pprint
 
-link = 'https://cep.awesomeapi.com.br/json/25740220'
-
+cep = '25740220'
+link = f'https://cep.awesomeapi.com.br/json/{cep}'
 endereco = requests.get(link).json()
 
 pprint.pprint(endereco)

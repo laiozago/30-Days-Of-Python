@@ -1,4 +1,4 @@
-[
+countries = [
     {
         "name": "Afghanistan",
         "capital": "Kabul",
@@ -2618,3 +2618,22 @@
         "currency": "Botswana pula"
     }
 ]
+
+"""
+What are the total number of languages in the data
+Find the ten most spoken languages from the data
+Find the 10 most populated countries in the world
+"""
+
+linguas = []
+for country in countries:
+    for language in country['languages']:
+        linguas.append(language)
+lingua_mais_usada = max(set(linguas), key = linguas.count)        
+linguas = set(linguas)
+print(f'A lingua mais usada e {lingua_mais_usada}')
+print(f'A quantidade de linguas e {len(linguas)}')
+
+dez_mais_populados = sorted(countries, key = lambda country: country['population'], reverse = True)[:10]
+nome_dos_dez = [country['name'] for country in dez_mais_populados]
+print(f'Dez paises mais populados: {nome_dos_dez}')
